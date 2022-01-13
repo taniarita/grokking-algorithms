@@ -1,33 +1,33 @@
 // Capítulo 2 - Ordenação por seleção / Arrays e Listas encadeadas
 
-function buscaMenorIndice(arr) {
-    let menorElemento = arr[0];
-    let menorIndice = 0;
+function buscaIndiceMenorElemento(arr) {
+  let menorElemento = arr[0];
+  let menorIndice = 0;
 
-    for(let i = 1; i < arr.length; i++) {
-        if(arr[i] < menorElemento) {
-            menorElemento = arr[i]
-            menorIndice = i
-        }
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] < menorElemento) {
+      menorElemento = arr[i];
+      menorIndice = i;
     }
+  }
 
-    return menorIndice;
+  return menorIndice;
 }
 
 function ordenacaoPorSelecao(arr) {
-    const novoArr = [];
-    const tamanhoArray = arr.length;
+  const novoArr = [];
+  const tamanhoArray = arr.length;
 
-    for(let i = 0; i < tamanhoArray; i++) {
-        let menorIndice = buscaMenorIndice(arr);
-        novoArr.push(arr[menorIndice]);
-        arr.splice(menorIndice, 1)
-    }
+  for (let i = 0; i < tamanhoArray; i++) {
+    let menorIndice = buscaIndiceMenorElemento(arr);
+    novoArr.push(arr[menorIndice]);
+    arr.splice(menorIndice, 1);
+  }
 
-    return novoArr;
+  return novoArr;
 }
 
-const teste = [30, 20, 10, 40, 50, 5, 70]
+const teste = [30, 20, 10, 40, 50, 5, 70];
 const testeOrdenado = ordenacaoPorSelecao(teste);
 console.log(testeOrdenado);
 
