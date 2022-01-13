@@ -23,7 +23,7 @@ const listTest = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 const test = binarySearch(listTest, 5);
 
-console.log(test); 
+console.log(test);
 
 /*  Com a pesquisa binária, você chuta um número intermediário e elimina a metade dos números restantes a cada vez;
     Log n na base 2;
